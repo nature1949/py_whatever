@@ -13,7 +13,7 @@ import json
 
 #画图
 import matplotlib.pyplot as plt
-''
+
 plt.rcParams['font.sans-serif']=['simhei'] #用来正常显示中文标签
 plt.rcParams['axes.unicode_minus']=False #用来正常显示负号
 
@@ -435,12 +435,7 @@ def histogram(data):
         y2.append(round(data[i][2]*100, 2))
         y3.append(round(data[i][3]*100, 2))
         y4.append(round(data[i][4]*100, 2))
-    '''
-    size = 10
-    y1 = [6, 5, 8, 5, 6, 6, 8, 9, 8, 10]
-    y2 = [5, 3, 6, 4, 3, 4, 7, 4, 4, 6]
-    y3 = [4, 1, 2, 1, 2, 1, 6, 2, 3, 2]
-    '''
+
     x = np.arange(len(data))
     
     total_width, n = 0.8, 4     # 有多少个类型，只需更改n即可
@@ -506,13 +501,7 @@ def area_chart(data):
     
     # setting
     ax.legend(bbox_to_anchor=(0.15, 0.8), loc=3, fontsize=10) #图例
-#    ax.set_xticks(range(1,6,1))
-#    ax.set_yticks(range(0,25,5)) #y轴范围/刻度
-    '''
-    plt.title('每年毕业生男女生人数', fontsize=10)
-    plt.ylabel('毕业生人数', fontsize=10)
-    plt.ylabel('年份', fontsize=10)
-    '''
+
     # 修改x轴的刻度
     plt.xticks(x, fontsize=10)
     plt.yticks(fontsize=10)
@@ -706,11 +695,8 @@ if __name__ == '__main__':
     data_2011 = [2011] + get_data_2011(html_2011, headers)
     data_2010 = [2010] + get_data_2010(html_2010, headers)
     data = [data_2010] + [data_2011] + [data_2012] + [data_2013] + [data_2014] + [data_2015] + [data_2016] + [data_2017] + [data_2018]
-#    print(len(data))
     #每年毕业生人数
     gra_data = get_data_gra()
-#    print(len(gra_data))
-#    print(gra_data)
 
     #统计计算
 
@@ -738,8 +724,7 @@ if __name__ == '__main__':
                     data_gra_ratio.append([i,round(theoretical_num/gra_data[j][1]/1e4, 2)])  #[年份，男/女*100(百分比)]
 
                     classification_ratio.append([i, data[i-2010][2][0]/4/theoretical_num, data[i-2010][3][0]/3/theoretical_num, data[i-2010][5][0]/4/theoretical_num, data[i-2010][6][0]/3/theoretical_num])
-#                    print(i, data[i-2010][2][0]/4 , data[i-2010][3][0]/3 , data[i-2010][5][0]/4 , data[i-2010][6][0]/3, gra_data[j][1])
-#    print(len(gra_data), len(data_gra_ratio))
+
     graph_two_data(gra_data, data_gra_ratio)
     histogram(classification_ratio)
 
@@ -762,7 +747,6 @@ if __name__ == '__main__':
                     und_all.append([i, int(gra_data[j][1]*1e4/theoretical_num*data[i-2010][5][1]/4), int(gra_data[j][1]*1e4/theoretical_num*data[i-2010][5][2]/4)])
                     sho_all.append([i, int(gra_data[j][1]*1e4/theoretical_num*data[i-2010][6][1]/3), int(gra_data[j][1]*1e4/theoretical_num*data[i-2010][6][2]/3)])
 
-#    print(sum_all)
     area_chart(sum_all)
 
     #计算2018年度已毕业人数
@@ -784,9 +768,7 @@ if __name__ == '__main__':
                 categories_male_num[i-1][3] + und_all[i][1], categories_male_num[i-1][4] + sho_all[i][1]])
             categories_female_num.append([sum_all[i][0], categories_female_num[i-1][1] + doc_all[i][2], categories_female_num[i-1][2] + mas_all[i][2], 
                 categories_female_num[i-1][3] + und_all[i][2], categories_female_num[i-1][4] + sho_all[i][2]])
-#        print(sum_all[i][0])
-#    print(gra_num)
-#    area_chart(gra_num)
+
     pie_chart([gra_num[-1][1], gra_num[-1][2]])
     per_year_gra = []
     for i in range(len(gra_num)):
