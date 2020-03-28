@@ -5,10 +5,10 @@ The main task of this project is to collect statistics on China's annual college
 过程不加赘述，结论如图所示。
 代码不尽人意之处，敬请批评指正。
 更多请关注微信公众号“数据的秘密”，有针对代码重点难点之处的解答和说明。
-https://github.com/nature1949/py_whatever/blob/master/result_picture/每年毕业生人数统计.png
-https://github.com/nature1949/py_whatever/blob/master/result_picture/各学历毕业生占比.png
-https://github.com/nature1949/py_whatever/blob/master/result_picture/在校学生性别比.png
-https://github.com/nature1949/py_whatever/blob/master/result_picture/每年毕业男女人数及占比.png
-https://github.com/nature1949/py_whatever/blob/master/result_picture/2010-2018毕业生性别比.png
-https://github.com/nature1949/py_whatever/blob/master/result_picture/至2018年不同学历毕业生对比.png
-https://github.com/nature1949/py_whatever/blob/master/result_picture/2010年以来男女毕业生统计.png
+[image](https://github.com/nature1949/py_whatever/blob/master/result_picture/每年毕业生人数统计.png)
+[image](https://github.com/nature1949/py_whatever/blob/master/result_picture/各学历毕业生占比.png)
+[image](https://github.com/nature1949/py_whatever/blob/master/result_picture/在校学生性别比.png)
+[image](https://github.com/nature1949/py_whatever/blob/master/result_picture/每年毕业男女人数及占比.png)
+[image](https://github.com/nature1949/py_whatever/blob/master/result_picture/2010-2018毕业生性别比.png)
+[image](https://github.com/nature1949/py_whatever/blob/master/result_picture/至2018年不同学历毕业生对比.png)
+[image](https://github.com/nature1949/py_whatever/blob/master/result_picture/2010年以来男女毕业生统计.png)
